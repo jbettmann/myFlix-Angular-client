@@ -1,0 +1,45 @@
+<mat-toolbar class="nav">
+  <span (click)="openAllMovies()">
+    <h2>myFlix</h2>
+  </span>
+  <div class="nav-profile">
+    <mat-icon
+      (click)="openAllMovies()"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      >home</mat-icon
+    >
+    <span>
+      <button mat-button (click)="logoutUser()">Logout</button>
+    </span>
+  </div>
+</mat-toolbar>
+
+<div class="profile-div">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Profile</mat-card-title>
+    </mat-card-header>
+    <div class="profile-content-container">
+      <div class="profile-photo"></div>
+      <div class="profile-info">
+        <mat-card-content>
+          <h4>Username</h4>
+          <p>{{ user.Username }}</p>
+          <h4>Email</h4>
+          <p>{{ user.Email }}</p>
+          <h4>Birthday</h4>
+          <p>{{ user.Birthday }}</p>
+        </mat-card-content>
+      </div>
+    </div>
+    <mat-card-actions class="profile-button-div">
+      <button mat-button class="update-button" (click)="openUserLoginDialog()">
+        Update Profile
+      </button>
+      <button mat-button class="delete-button" (click)="deleteUserProfile()">
+        Delete Profile
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

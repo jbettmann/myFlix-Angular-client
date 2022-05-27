@@ -1,0 +1,100 @@
+$background: #12011f;
+$secondColor: #6c0ab7;
+$cardTextColor: #fff;
+
+.nav {
+  h2 {
+    cursor: pointer;
+    font-size: 2rem;
+    color: $cardTextColor;
+    padding-left: 1rem;
+  }
+
+  button {
+    color: $cardTextColor;
+  }
+  background-color: $secondColor;
+  display: flex;
+  justify-content: space-between;
+
+  .nav-profile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-basis: 124px;
+    color: $cardTextColor;
+    cursor: pointer;
+  }
+}
+
+.profile-div {
+  background-image: linear-gradient(
+    $secondColor,
+    lighten($background, 22%),
+    lighten($background, 17%),
+    lighten($background, 15%),
+    lighten($background, 10%),
+    $background
+  );
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
+}
+.mat-card {
+  border-width: 1px;
+  box-shadow: 0px 4px 20px 2px #6a15aa;
+  width: 500px;
+  height: 45%;
+  margin: 20px;
+  color: $background;
+
+  button {
+    margin: 0.3rem 0;
+    color: $cardTextColor;
+  }
+}
+.mat-card-header {
+  color: darken($secondColor, 10%);
+  justify-content: center;
+}
+
+.profile-content-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  margin-top: 2rem;
+  p {
+    margin-left: 1rem;
+    font-weight: 400;
+  }
+
+  h4 {
+    color: $secondColor;
+    font-weight: 600;
+    margin-left: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.profile-photo {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: $secondColor;
+}
+
+.profile-button-div {
+  display: flex;
+  justify-content: space-around;
+  // flex-direction: row-reverse;
+}
+
+.update-button {
+  background-color: lighten($secondColor, 10%);
+}
+
+.delete-button {
+  background-color: darken($secondColor, 10%);
+}
