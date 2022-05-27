@@ -1,0 +1,14 @@
+$background: #12011f;
+$secondColor: #6c0ab7;
+$cardTextColor: #fff;
+
+.user-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  background-color: $secondColor;
+  color: $cardTextColor;
+}
