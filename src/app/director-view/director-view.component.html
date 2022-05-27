@@ -1,0 +1,27 @@
+<div>
+  <!-- *ngFor directive used to display all returned movies in their own movie card
+      movies refers to movies [] variable in component file -->
+  <mat-card class="director-card">
+    <mat-card-header>
+      <mat-card-title>{{ data.Name }}</mat-card-title>
+    </mat-card-header>
+    <mat-dialog-content>
+      <h4>Bio</h4>
+      <p>{{ data.Bio }}</p>
+      <h4>Birth</h4>
+      <p>{{ data.Birthday }}</p>
+      <h4>Death</h4>
+      <p>{{ data.Death }}</p>
+    </mat-dialog-content>
+    <mat-card-actions class="close-button-div">
+      <button
+        mat-raised-button
+        aria-label="Close director view"
+        mat-dialog-close
+        class="close-button"
+      >
+        Close
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
