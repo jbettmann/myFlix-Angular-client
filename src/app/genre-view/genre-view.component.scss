@@ -1,0 +1,25 @@
+$background: #12011f;
+$secondColor: #6c0ab7;
+$cardTextColor: #fff;
+
+p {
+  // color: $background;
+  margin-left: 1rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 600;
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+
+.close-button-div {
+  display: flex;
+  justify-content: center;
+}
+
+.close-button {
+  background-color: lighten($secondColor, 10%);
+  color: $cardTextColor;
+}
