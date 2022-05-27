@@ -1,0 +1,27 @@
+<div class="synopsis-div">
+  <!-- *ngFor directive used to display all returned movies in their own movie card
+      movies refers to movies [] variable in component file -->
+  <mat-card>
+    <div class="image">
+      <img src="{{ data.Image }}" alt="{{ data.Title }}" />
+    </div>
+    <mat-card-header>
+      <mat-card-title>{{ data.Title }}</mat-card-title>
+      <mat-card-subtitle>{{ data.Release }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-dialog-content>
+      <h4>Description</h4>
+      <p>{{ data.Description }}</p>
+    </mat-dialog-content>
+    <mat-card-actions class="close-button-div">
+      <button
+        mat-raised-button
+        aria-label="Close genre view"
+        mat-dialog-close
+        class="close-button"
+      >
+        Close
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
