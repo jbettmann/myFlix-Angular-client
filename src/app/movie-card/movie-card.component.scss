@@ -1,0 +1,94 @@
+$background: #12011f;
+$secondColor: #6c0ab7;
+$cardTextColor: #fff;
+
+.nav {
+  h2 {
+    cursor: pointer;
+    font-size: 2rem;
+    color: $cardTextColor;
+    padding-left: 1rem;
+  }
+  button {
+    color: $cardTextColor;
+  }
+  background-color: $secondColor;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-card-div {
+  background-image: linear-gradient(
+    $secondColor,
+    lighten($background, 22%),
+    lighten($background, 17%),
+    lighten($background, 15%),
+    lighten($background, 10%),
+    $background
+  );
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10rem;
+  padding-bottom: 5rem;
+}
+.mat-card {
+  background-image: linear-gradient(
+    lighten($background, 15%),
+    lighten($background, 2%)
+  );
+
+  border-width: 1px;
+  box-shadow: 0px 4px 20px 2px #6a15aa;
+  width: 250px;
+  margin: 20px;
+  color: $cardTextColor;
+  img {
+    width: 100%;
+  }
+  button {
+    margin: 0.3rem 0;
+    width: 100%;
+    background-color: lighten($secondColor, 10%);
+    color: $cardTextColor;
+  }
+  .release-text {
+    color: darken($cardTextColor, 30%);
+  }
+  .movie-card-description {
+    font-size: 0.8rem;
+    color: darken($cardTextColor, 30%);
+  }
+}
+
+.mat-card-actions {
+  margin: 0;
+  padding: 0;
+}
+
+.movie-card-details {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  margin-bottom: 0.8rem;
+  p {
+    display: flex;
+    align-items: center;
+    color: darken($cardTextColor, 30%);
+    margin: 0;
+  }
+}
+
+.director-button {
+  margin-bottom: 0.5rem;
+}
+
+.fav-button {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  margin: 0.7rem;
+  padding: 0;
+}

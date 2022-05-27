@@ -1,0 +1,90 @@
+<mat-toolbar class="nav">
+  <span (click)="openAllMovies()">
+    <h2>myFlix</h2>
+  </span>
+  <div>
+    <span>
+      <button mat-button (click)="openProfileView()">Profile</button>
+    </span>
+    <span>
+      <button mat-button (click)="logoutUser()">Logout</button>
+    </span>
+  </div>
+</mat-toolbar>
+
+<div class="movie-card-div">
+  <!-- *ngFor directive used to display all returned movies in their own movie card
+      movies refers to movies [] variable in component file -->
+  <mat-card *ngFor="let movie of movies; let i = index">
+    <mat-card-header>
+      <mat-card-title>{{ movie.Title }}</mat-card-title>
+      <mat-card-subtitle class="release-text">{{
+        movie.Release
+      }}</mat-card-subtitle>
+    </mat-card-header>
+    <img src="{{ movie.ImageUrl }}" alt="{{ movie.Title }}" />
+
+    <mat-card-actions>
+      <div class="movie-card-details">
+        <button
+          mat-raised-button
+          (click)="
+            openSynopsisComponent(
+              movie.ImageUrl,
+              movie.Title,
+              movie.Description,
+              movie.Release
+            )
+          "
+        >
+          Synopsis
+        </button>
+      </div>
+      <div class="movie-card-details">
+        <p>Genre:</p>
+        <button
+          mat-raised-button
+          (click)="
+            openGenreComponent(movie.Genre.Name, movie.Genre.Description)
+          "
+        >
+          {{ movie.Genre.Name }}
+        </button>
+      </div>
+      <div class="movie-card-details">
+        <p>Directed By:</p>
+        <button
+          *ngFor="let Director of movie.Director; let i = index"
+          mat-raised-button
+          class="director-button"
+          (click)="
+            openDirectorComponent(
+              Director.Name,
+              Director.Bio,
+              Director.Birth,
+              Director.Death
+            )
+          "
+        >
+          {{ Director.Name }}
+        </button>
+      </div>
+      <div class="fav-button">
+        <div
+          *ngIf="!isFav(movie._id)"
+          mat-button
+          (click)="addFavoriteMovie(movie._id)"
+        >
+          <mat-icon> favorite_border </mat-icon>
+        </div>
+        <div
+          *ngIf="isFav(movie._id)"
+          mat-button
+          (click)="removeFavoriteMovie(movie._id)"
+        >
+          <mat-icon> favorite </mat-icon>
+        </div>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>
