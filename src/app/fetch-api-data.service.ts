@@ -85,7 +85,7 @@ export class FetchApiDataService {
    * @parms name
    * @returns data about director of movie in JSON format
    */
-  getDirector(name: any): Observable<any> {
+  getDirectors(name: any): Observable<any> {
     return this.http
       .get(apiUrl + 'movies/directors/' + name, {
         headers: new HttpHeaders({
@@ -145,11 +145,15 @@ export class FetchApiDataService {
    */
   addMovieToFavoriteList(movieID: any): Observable<any> {
     return this.http
-      .post(apiUrl + 'users/' + username + '/favorites/' + movieID, {
-        headers: new HttpHeaders({
-          Authorization: 'Bearer ' + token,
-        }),
-      })
+      .post(
+        apiUrl + 'users/' + username + '/favorites/' + movieID,
+        {},
+        {
+          headers: new HttpHeaders({
+            Authorization: 'Bearer ' + token,
+          }),
+        }
+      )
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
