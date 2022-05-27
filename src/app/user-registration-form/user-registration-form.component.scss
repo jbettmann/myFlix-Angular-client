@@ -1,0 +1,26 @@
+$background: #12011f;
+$secondColor: #6c0ab7;
+$cardTextColor: #fff;
+
+.mat-card-header {
+  justify-content: center;
+}
+
+.user-reg_form {
+  padding: 0 0.5rem;
+}
+
+button {
+  background-color: lighten($secondColor, 10%);
+  color: $cardTextColor;
+}
+
+.user-reg_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-button-div {
+  display: flex;
+  justify-content: center;
+}
