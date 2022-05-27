@@ -98,3 +98,13 @@ $cardTextColor: #fff;
 .delete-button {
   background-color: darken($secondColor, 10%);
 }
+
+@media (max-width: 435px) {
+  .profile-content-container {
+    flex-wrap: wrap;
+  }
+
+  .mat-card {
+    height: 70%;
+  }
+}
