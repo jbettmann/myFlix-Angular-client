@@ -1,0 +1,35 @@
+
+$background: #12011f;
+$secondColor: #6c0ab7;
+$cardTextColor: #fff;
+
+
+
+.main-page {
+  background-image: linear-gradient($secondColor, lighten($background, 22%), lighten($background, 17%), lighten($background, 15%), lighten($background, 10%), $background);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // div {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  // }
+}
+
+h1 {
+  color: $cardTextColor
+}
+
+.login-button {
+  background-color: lighten($secondColor, 10%);
+  color: $cardTextColor;
+  margin-bottom: 1rem;
+}
+
+.signup-button {
+  background-color: darken($secondColor, 10%);
+  color: $cardTextColor
+}
