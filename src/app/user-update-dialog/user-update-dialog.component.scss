@@ -1,0 +1,27 @@
+$background: #12011f;
+$secondColor: #6c0ab7;
+$cardTextColor: #fff;
+
+.mat-card-header {
+  justify-content: center;
+}
+
+.update-profile-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.button-div {
+  display: flex;
+  justify-content: center;
+}
+
+.update-button {
+  background-color: lighten($secondColor, 10%);
+}
+
+.close-button {
+  background-color: darken($secondColor, 10%);
+  color: $cardTextColor;
+}
