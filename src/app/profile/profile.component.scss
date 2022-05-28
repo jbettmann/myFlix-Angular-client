@@ -45,13 +45,12 @@ $cardTextColor: #fff;
   border-width: 1px;
   box-shadow: 0px 4px 20px 2px #6a15aa;
   width: 500px;
-  height: 45%;
+  max-height: 50%;
   margin: 20px;
   color: $background;
 
   button {
-    margin: 0.3rem 0;
-    color: $cardTextColor;
+    margin: 0.2rem 0;
   }
 }
 .mat-card-header {
@@ -87,24 +86,54 @@ $cardTextColor: #fff;
 
 .profile-button-div {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  // flex-direction: row-reverse;
+  align-items: center;
+  margin-top: 1.5rem;
 }
 
 .update-button {
+  color: $cardTextColor;
   background-color: lighten($secondColor, 10%);
 }
 
 .delete-button {
-  background-color: darken($secondColor, 10%);
+  color: $secondColor;
 }
 
 @media (max-width: 435px) {
+  .nav {
+    .nav-profile {
+      justify-content: flex-end;
+    }
+  }
+  .mat-card > :first-child {
+    margin-top: 1rem;
+  }
   .profile-content-container {
     flex-wrap: wrap;
+    align-items: center;
   }
 
+  .profile-info {
+    margin-top: 1rem;
+    .mat-card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .profile-content-container {
+    h4 {
+      margin-left: 0;
+    }
+    p {
+      margin-left: 0;
+    }
+  }
   .mat-card {
-    height: 60%;
+    max-height: 72%;
   }
 }

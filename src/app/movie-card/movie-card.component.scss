@@ -15,6 +15,15 @@ $cardTextColor: #fff;
   background-color: $secondColor;
   display: flex;
   justify-content: space-between;
+
+  .nav-movie-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-basis: 124px;
+    color: $cardTextColor;
+    cursor: pointer;
+  }
 }
 
 .movie-card-div {
@@ -49,7 +58,7 @@ $cardTextColor: #fff;
   button {
     margin: 0.3rem 0;
     width: 100%;
-    background-color: lighten($secondColor, 10%);
+    background-color: $secondColor;
     color: $cardTextColor;
   }
   .release-text {
@@ -69,9 +78,7 @@ $cardTextColor: #fff;
 .movie-card-details {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 0.7rem;
-  margin-right: 0.7rem;
-  margin-bottom: 0.8rem;
+  margin: 0.3rem 0.7rem 0.8rem 0.7rem;
   p {
     display: flex;
     align-items: center;

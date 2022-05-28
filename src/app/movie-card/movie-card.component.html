@@ -2,13 +2,14 @@
   <span (click)="openAllMovies()">
     <h2>myFlix</h2>
   </span>
-  <div>
-    <span>
-      <button mat-button (click)="openProfileView()">Profile</button>
-    </span>
-    <span>
-      <button mat-button (click)="logoutUser()">Logout</button>
-    </span>
+  <div class="nav-movie-card">
+    <mat-icon
+      aria-hidden="false"
+      aria-label="return to all movies"
+      (click)="openProfileView()"
+      >perm_identity
+    </mat-icon>
+    <button mat-button (click)="logoutUser()">Logout</button>
   </div>
 </mat-toolbar>
 
