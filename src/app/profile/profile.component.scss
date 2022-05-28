@@ -103,11 +103,6 @@ $cardTextColor: #fff;
 }
 
 @media (max-width: 435px) {
-  .nav {
-    .nav-profile {
-      justify-content: flex-end;
-    }
-  }
   .mat-card > :first-child {
     margin-top: 1rem;
   }
