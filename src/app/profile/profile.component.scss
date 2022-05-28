@@ -19,6 +19,7 @@ $cardTextColor: #fff;
 
   .nav-profile {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
     flex-basis: 124px;
