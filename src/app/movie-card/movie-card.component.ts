@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss'],
 })
-export class MovieCardComponent {
+export class MovieCardComponent implements OnInit {
   // movies returned from API will be kept
   movies: any[] = [];
   favorites: any[] = [];
@@ -35,6 +35,11 @@ export class MovieCardComponent {
     this.getFavoriteMoviesList();
   }
 
+  /*
+   * Gets movies from api call and sets the movies state to return JSON file
+   * @returns array holding movies objects
+   * @function getAllMovies
+   */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -42,6 +47,12 @@ export class MovieCardComponent {
       return this.movies;
     });
   }
+
+  /*
+   * Gets favorite movies from api call and sets the favorite movies variable to return JSON file
+   * @returns array holding ids of user's favorite movies
+   * @function getFavoriteMovies
+   */
   getFavoriteMoviesList(): void {
     this.fetchApiData.getUserFavoriteMovies().subscribe((resp: any) => {
       this.favorites = resp.FavoriteMovies;
@@ -50,10 +61,22 @@ export class MovieCardComponent {
     });
   }
 
+  /*
+   * checks if a movie is included in the user's list of favorite movies
+   * @param id
+   * @returns true, if the movie is a favorite move, else false
+   */
   isFav(id: string): boolean {
     return this.favorites.includes(id);
   }
 
+  /*
+   * opens the user director dialog from DirectorComponent to displaying details
+   * @param name
+   * @param bio
+   * @param birthday
+   * @param death
+   */
   openDirectorComponent(
     name: string,
     bio: string,
@@ -72,6 +95,11 @@ export class MovieCardComponent {
     });
   }
 
+  /*
+   * opens the user genre dialog from GenreComponent to displaying details
+   * @param name
+   * @param description
+   */
   openGenreComponent(name: string, description: string): void {
     this.dialog.open(GenreViewComponent, {
       data: {
@@ -83,6 +111,13 @@ export class MovieCardComponent {
     });
   }
 
+  /*
+   * opens the user synopsis dialog from SynopsisComponent to displaying details
+   * @param title
+   * @param description
+   * @param image
+   * @param release
+   */
   openSynopsisComponent(
     image: any,
     title: string,
@@ -101,6 +136,11 @@ export class MovieCardComponent {
     });
   }
 
+  /*
+   * adds a movie to the list of favorite movies via an API call
+   * @param id
+   * @function addFavoriteMovie
+   */
   addFavoriteMovie(id: any): void {
     this.fetchApiData.addMovieToFavoriteList(id).subscribe((response) => {
       // Logic for a successful user registration goes here! (To be implemented)
@@ -111,6 +151,12 @@ export class MovieCardComponent {
       this.ngOnInit();
     });
   }
+
+  /*
+   * removes a movie from the list of favorite movies via an API call
+   * @param id
+   * @function removeFavoriteMovie
+   */
   removeFavoriteMovie(id: any): void {
     this.fetchApiData.deleteMovieFromFavoriteList(id).subscribe((response) => {
       // Logic for a successful user registration goes here! (To be implemented)

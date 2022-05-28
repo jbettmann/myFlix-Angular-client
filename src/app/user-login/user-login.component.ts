@@ -38,9 +38,6 @@ export class UserLoginComponent implements OnInit {
         localStorage.setItem('user', response.user.Username);
         this.dialogRef.close(); // close the modal on success!
         console.log(response);
-        this.snackBar.open('Login Successful!', 'OK', {
-          duration: 2000,
-        });
         this.router.navigate(['movies']);
       },
       (result) => {
