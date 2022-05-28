@@ -99,3 +99,9 @@ $cardTextColor: #fff;
   margin: 0.7rem;
   padding: 0;
 }
+
+@media (max-width: 644px) {
+  .mat-card {
+    width: 100%;
+  }
+}
