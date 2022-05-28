@@ -32,7 +32,6 @@ export class MovieCardComponent implements OnInit {
   // similar to componentDidMount or useEffect()
   ngOnInit(): void {
     this.getMovies();
-    this.getFavoriteMoviesList();
   }
 
   /*
@@ -44,6 +43,7 @@ export class MovieCardComponent implements OnInit {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
       console.log(this.movies);
+      this.getFavoriteMoviesList();
       return this.movies;
     });
   }
