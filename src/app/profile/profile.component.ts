@@ -26,7 +26,11 @@ export class ProfileComponent implements OnInit {
     this.getUser();
   }
 
-  // This is the function responsible for sending the form inputs to the backend
+  /*
+   * Gets user data from api call and sets the user variable to returned JSON file
+   * @returns object holding user information
+   * @function getUser
+   */
   getUser(): void {
     this.fetchApiData.getUserProfile().subscribe((response) => {
       console.log(response);
@@ -35,6 +39,7 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  // opens the edit profile dialog from EditProfileComponent to allow user to edit their details
   openUserLoginDialog(): void {
     this.dialog.open(UserUpdateDialogComponent, {
       // Assigning the dialog a width
@@ -42,6 +47,10 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  /*
+   * deletes the user profile, redirects to welcome screen
+   * @function deleteUser
+   */
   deleteUserProfile(): void {
     if (
       confirm(
