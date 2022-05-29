@@ -38,16 +38,16 @@ $cardTextColor: #fff;
     $background
   );
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   height: 100vh;
 }
-.mat-card {
+.profile-card {
   border-width: 1px;
   box-shadow: 0px 4px 20px 2px #6a15aa;
   width: 500px;
-  max-height: 50%;
   margin: 20px;
+  margin-bottom: 20rem;
   color: $background;
 
   button {
@@ -119,6 +119,10 @@ $cardTextColor: #fff;
       align-items: center;
       text-align: center;
     }
+  }
+
+  .profile-card {
+    margin-bottom: 10rem;
   }
 
   .profile-content-container {
