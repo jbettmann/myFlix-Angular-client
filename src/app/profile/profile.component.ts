@@ -26,7 +26,7 @@ export class ProfileComponent implements OnInit {
     this.getUser();
   }
 
-  /*
+  /**
    * Gets user data from api call and sets the user variable to returned JSON file
    * @returns object holding user information
    * @function getUser
@@ -39,7 +39,9 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  // opens the edit profile dialog from EditProfileComponent to allow user to edit their details
+  /**
+   * opens the edit profile dialog from EditProfileComponent to allow user to edit their details
+   */
   openUserLoginDialog(): void {
     this.dialog.open(UserUpdateDialogComponent, {
       // Assigning the dialog a width
@@ -47,7 +49,7 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  /*
+  /**
    * deletes the user profile, redirects to welcome screen
    * @function deleteUser
    */
@@ -58,7 +60,7 @@ export class ProfileComponent implements OnInit {
       )
     ) {
       this.router.navigate(['welcome']).then(() => {
-        this.snackBar.open('Account successfully deleted!', 'OK', {
+        this.snackBar.open('Account successfully deleted.', 'OK', {
           duration: 2000,
         });
       });
@@ -69,12 +71,18 @@ export class ProfileComponent implements OnInit {
     }
   }
 
-  openAllMovies(): void {
-    this.router.navigate(['movies']);
-  }
-
+  /**
+   * Logs user out and clears localStorage of user data
+   */
   logoutUser(): void {
     localStorage.clear();
     this.router.navigate(['welcome']);
+  }
+
+  /**
+   * Navigates to movie component
+   */
+  openAllMovies(): void {
+    this.router.navigate(['movies']);
   }
 }

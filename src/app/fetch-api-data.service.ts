@@ -27,7 +27,7 @@ export class FetchApiDataService {
   // Injects HttpClient into class
   constructor(private http: HttpClient) {}
 
-  /*
+  /**
    * calls API endpoint for new user registration
    * @param userDetails
    * @returns new  user object in JSON format
@@ -39,7 +39,7 @@ export class FetchApiDataService {
       .pipe(catchError(this.handleError));
   }
 
-  /*
+  /**
    * calls API endpoint for login to allow existing user to login
    * @param userDetails
    * @returns user data in JSON format
@@ -51,7 +51,7 @@ export class FetchApiDataService {
       .pipe(catchError(this.handleError));
   }
 
-  /*
+  /**
    * calls API endpoint for all movies
    * @returns array of all movies in JSON format
    */
@@ -65,7 +65,7 @@ export class FetchApiDataService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  /*
+  /**
    * calls API endpoint for single movies by title
    * @parms title
    * @returns data about single movies in JSON format
@@ -80,7 +80,7 @@ export class FetchApiDataService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  /*
+  /**
    * calls API endpoint for director by name
    * @parms name
    * @returns data about director of movie in JSON format
@@ -95,7 +95,7 @@ export class FetchApiDataService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  /*
+  /**
    * calls API endpoint for genre by name
    * @params genre
    * @returns data about genre in JSON format
@@ -110,7 +110,7 @@ export class FetchApiDataService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  /*
+  /**
    * calls API endpoint for existing user by username
    * @returns data about existing user in JSON format
    */
@@ -124,7 +124,7 @@ export class FetchApiDataService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  /*
+  /**
    * calls API endpoint for existing users Favorite movies list
    * @returns array of users Favorite movies list in JSON format
    */
@@ -138,7 +138,7 @@ export class FetchApiDataService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  /*
+  /**
    * calls API endpoint to add movie to Favorite movies list by movieID
    * @param movieID
    * @returns array of users Favorite movies list with new added movie in JSON format
@@ -157,7 +157,7 @@ export class FetchApiDataService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  /*
+  /**
    * calls API endpoint to delete movie from Favorites list by movieID
    * @param movieID
    * @returns new array of users Favorite movies list in JSON format
@@ -172,7 +172,7 @@ export class FetchApiDataService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  /*
+  /**
    * calls API endpoint to edit existing user info
    * @param userData
    * @returns updated user info in JSON format
@@ -187,7 +187,7 @@ export class FetchApiDataService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  /*
+  /**
    * calls API endpoint to delete user and data
    * @returns if delete was successful and returns to login page
    */

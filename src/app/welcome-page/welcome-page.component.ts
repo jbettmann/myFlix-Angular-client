@@ -12,7 +12,10 @@ export class WelcomePageComponent implements OnInit {
   // pass Angular Material dialog in constructor as and argument for use in component
   constructor(public dialog: MatDialog) {}
   ngOnInit(): void {}
-  // This is the function that will open the dialog when the signup button is clicked
+
+  /**
+   * This is the function that will open the dialog when the signup button is clicked
+   */
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
       // Assigning the dialog a width
@@ -20,6 +23,9 @@ export class WelcomePageComponent implements OnInit {
     });
   }
 
+  /**
+   * opens the user login dialog when button clicked
+   */
   openUserLoginDialog(): void {
     this.dialog.open(UserLoginComponent, {
       // Assigning the dialog a width

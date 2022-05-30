@@ -29,7 +29,10 @@ export class UserUpdateDialogComponent implements OnInit {
       this.snackBar.open('Profile successfully updated!', 'OK', {
         duration: 2000,
       });
-      // Log out user if they update Username or Password to avoid errors
+
+      /**
+       * Log out user if they update Username or Password to avoid errors
+       */
       if (this.userData.Username || this.userData.Password) {
         localStorage.clear();
         this.router.navigate(['welcome']);

@@ -34,7 +34,7 @@ export class MovieCardComponent implements OnInit {
     this.getMovies();
   }
 
-  /*
+  /**
    * Gets movies from api call and sets the movies state to return JSON file
    * @returns array holding movies objects
    * @function getAllMovies
@@ -48,7 +48,7 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
-  /*
+  /**
    * Gets favorite movies from api call and sets the favorite movies variable to return JSON file
    * @returns array holding ids of user's favorite movies
    * @function getFavoriteMovies
@@ -61,7 +61,7 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
-  /*
+  /**
    * checks if a movie is included in the user's list of favorite movies
    * @param id
    * @returns true, if the movie is a favorite move, else false
@@ -70,7 +70,7 @@ export class MovieCardComponent implements OnInit {
     return this.favorites.includes(id);
   }
 
-  /*
+  /**
    * opens the user director dialog from DirectorComponent to displaying details
    * @param name
    * @param bio
@@ -95,7 +95,7 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
-  /*
+  /**
    * opens the user genre dialog from GenreComponent to displaying details
    * @param name
    * @param description
@@ -111,7 +111,7 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
-  /*
+  /**
    * opens the user synopsis dialog from SynopsisComponent to displaying details
    * @param title
    * @param description
@@ -136,7 +136,7 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
-  /*
+  /**
    * adds a movie to the list of favorite movies via an API call
    * @param id
    * @function addFavoriteMovie
@@ -152,7 +152,7 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
-  /*
+  /**
    * removes a movie from the list of favorite movies via an API call
    * @param id
    * @function removeFavoriteMovie
@@ -168,14 +168,23 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Navigates to profile component
+   */
   openProfileView(): void {
     this.router.navigate(['profile']);
   }
 
+  /**
+   * Navigates to movie component
+   */
   openAllMovies(): void {
     this.router.navigate(['movies']);
   }
 
+  /**
+   * Logs user out and clears localStorage of user data
+   */
   logoutUser(): void {
     localStorage.clear();
     this.router.navigate(['welcome']);
