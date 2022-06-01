@@ -15,9 +15,12 @@ movie details are displayed. A profile view is also available for the user to vi
 
 Check out the live demo of the [Angular myFlix App](https://jbettmann.github.io/myFlix-Angular-client/welcome). To play around, register or sign in with the account:
 
-- Username: LimeZone5
-- Password: password
-  **_Please refrain from deleting or updated user LimeZone5 info_**
+- Username: **LimeZone5**
+- Password: **password**
+
+**_Please refrain from deleting or updated user LimeZone5 info_**
+
+![screenshot of live myFlix homepage](https://user-images.githubusercontent.com/96999730/171437644-30c3fa2d-327d-4da4-9eb2-81e8443581b9.png)
 
 ## Development server
 
