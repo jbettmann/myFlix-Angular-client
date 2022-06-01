@@ -22,10 +22,6 @@ Check out the live demo of the [Angular myFlix App](https://jbettmann.github.io/
 
 ![screenshot of live myFlix homepage](https://user-images.githubusercontent.com/96999730/171437644-30c3fa2d-327d-4da4-9eb2-81e8443581b9.png)
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
 ## Built With
 
 - Angular
@@ -39,6 +35,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 - Allows users to view details about movies, genres and directors
 - Users are able to update or delete their profile
 - Users are able to add/remove movies to their list of favorites
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
