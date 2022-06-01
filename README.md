@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Description
 
-Using the myFlix REST API build in a [previous project](https://github.com/jbettmann/myFlix-app), this client
+Using the [myFlix REST API](https://github.com/jbettmann/myFlix-app) build in a previous project , this client
 side version of the myFlix App was build with Angular. Users are
 directed to a welcome screen where they have the options of logging
 in or signing up. Once logged in and upon clicking on a particular
