@@ -80,6 +80,8 @@ $cardTextColor: #fff;
 .profile-photo {
   width: 10rem;
   height: 10rem;
+  background-image: url("https://cataas.com/cat");
+  background-size: cover;
   border-radius: 50%;
   border-style: solid;
   border-color: $secondColor;
