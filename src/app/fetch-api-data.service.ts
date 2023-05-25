@@ -9,7 +9,7 @@ import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 // Declaring the api url that will provide data for the client app
-const apiUrl = 'https://jordansmyflix.herokuapp.com/';
+const apiUrl = 'https://my-flix-app.vercel.app/';
 // Gets token from localStorage
 const token = localStorage.getItem('token');
 // Gets username from localStorage for endpoints
